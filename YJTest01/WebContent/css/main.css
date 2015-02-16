@@ -1,0 +1,256 @@
+body {
+	margin: 0;
+	background: #F5F5F5;
+	font-family: 'NanumBarunGothic', sans-serif;
+}
+
+button,input,select {
+	outline: none;
+}
+
+span.mmenu {
+	display: inline-block;
+	vertical-align: middle;
+	color: #666;
+	font-weight: 300;
+	padding: 0 20px;
+	height: 100%;
+	line-height: 80px;
+}
+
+span.mmenu:hover {
+	color: #FA6E92;
+	cursor: pointer;
+}
+
+div.divider {
+	display: inline-block;
+	width: 1px;
+	background: #eee;
+	height: 30px;
+	vertical-align: middle;
+}
+
+div#top {
+	background: #FFF;
+	padding: 10px;
+	margin: 0;
+	border-bottom: #ddd 1px solid;
+	min-width: 1250px;
+	height: 80px;
+}
+
+div#mmenuContainer {
+	margin: 0 auto;
+	width: 1200px;
+	height: inherit;
+}
+
+div.right {
+	float: right;
+}
+
+button.default01 {
+	border: none;
+	padding: 10px;
+	font-family: inherit;
+	background: none;
+	color: #777777;
+	outline: none;
+	vertical-align: top;
+}
+
+div.btngroup01 {
+	display: inline-block;
+	vertical-align: middle;
+	height: 35px;
+	background: #F0F0F0;
+	border: 1px solid #ccc;
+	border-radius: 13px;
+}
+
+button:hover {
+	cursor: pointer;
+}
+
+div#mainMiddle {
+	background-image: url('../imgs/introimg2.jpg');
+	height: 300px;
+	background-size: 100% auto;
+	background-position-y: center;
+	text-align: center;
+}
+
+div#mainMiddle>span {
+	display: block;
+	color: white;
+	line-height: 70px;
+	top: 33%;
+	position: relative;
+	font-size: 45px;
+	text-shadow: #6B3D3D 2px 2px;
+	letter-spacing: 3px;
+}
+
+div#mainMiddle>span>span {
+	display: block;
+	line-height: 40px;
+	font-size: 25px;
+	letter-spacing: 1px;
+}
+
+div#notice {
+	height: 40px;
+	background: white;
+	border-bottom: #ddd 1px solid;
+	border-top: #ddd 1px solid;
+	text-align: center;
+}
+
+div#notice>span {
+	line-height: 40px;
+	color: #777;
+}
+
+div#notice>span:hover {
+	cursor: pointer;
+	color: #aaa;
+}
+
+div#bottom {
+	padding: 10px;
+	background: #FFF;
+	border-top: 1px solid #ddd;
+	min-width: 1250px;
+}
+
+div#bottomContainer {
+	width: 1200px;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+div#bottomContainer>span {
+	display: block;
+	font-size: smaller;
+	color: #777;
+	line-height: 20px;
+}
+
+div.title {
+	background: #f989a6;
+	height: 60px;
+	border-bottom: #DDD 1px solid;
+	padding: 20px;
+	vertical-align: middle;
+	display: block;
+}
+
+div.title>.loginTitle {
+	color: #FFF;
+	font-weight: bold;
+	font-size: 16pt;
+	letter-spacing: 2px;
+	padding: 0;
+	line-height: 70px;
+	cursor: default;
+}
+
+div.xbtn {
+	float: right;
+	cursor: pointer;
+}
+
+span.loginContent {
+	display: block;
+	font-size: 13pt;
+	color: #777;
+	font-weight: 400;
+	margin : 8px 0;
+}
+
+.loginContent>input[type="text"]:focus, 
+.loginContent>input[type="password"]:focus,
+.loginContent>select:focus {
+	box-shadow: 0 0 10px rgba(255, 178, 198, 1);
+  border: 1px solid rgba(255, 178, 198, 1);
+}
+.loginContent>input[type="text"], 
+.loginContent>input[type="password"],
+.loginContent>select {
+	padding: 10px;
+	width: 320px;
+	border-radius: 5px;
+	border: 1px solid #ddd;
+	font-family: inherit;
+  font-size: 11pt;
+  letter-spacing: 0.5px;
+	background: #FAFAFA;
+}
+.loginContent>select  {
+	width: 230px;
+	font-family: inherit;
+	font-size: 80%;
+	color: #555;
+}
+.loginContent>label {
+	display: inline-block;
+letter-spacing: 2px;
+width: 100px;
+text-indent: 10px;
+font-size: 90%;
+}
+div.side-contents {
+	padding: 30px;
+}
+
+hr.hr01 {
+	margin: 15px 0;
+color: #FFFFFF;
+border-width: 0px;
+border-bottom: 1px solid #EDEDED;
+}
+
+button.pinkbtn {
+	background: #F989A6;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 15px;
+	color: #FFF;
+	font-family: inherit;
+	letter-spacing: 1.5px;
+	font-size: 11pt;
+}
+div.main-cover {
+	width: 100%;
+height: 100%;
+top: 0;
+position: absolute;
+z-index: -1;
+background: #000;
+opacity: 0.2;
+}
+span.validation {
+  font-size: 10pt;
+  display: inline-block;
+  color: #666;
+}
+input.error {
+	background: #FFF1F4 !important;
+  margin: 0 !important;
+	color: #D26E6E !important;
+	text-indent: 0 !important;
+	}
+input.valid {
+margin: 0 !important;
+color: #666 !important;
+text-indent: 0 !important;
+background: url('../imgs/valid.png') #FAFAFA no-repeat right !important;
+}
+.error {
+	margin : 3px 0;
+  font-size: 10pt;
+  display: inline-block;
+  color: #FF5E8F;
+  text-indent: 10px;
+}

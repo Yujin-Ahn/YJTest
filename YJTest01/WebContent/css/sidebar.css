@@ -1,0 +1,53 @@
+/* html, body {
+	height: 100%;
+	overflow-x: hidden;
+}
+ */
+.jsc-sidebar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 400px;
+	height: 100%;
+	background: #FFF;
+}
+
+.jsc-sidebar-content {
+	position: relative;
+	top: 0;
+	left: 0;
+	min-height: 100%;
+	z-index: 10;
+}
+
+.jsc-sidebar-pulled {
+	-webkit-transition: -webkit-transform 0.5s ease;
+	-moz-transition: -moz-transform 0.5s ease;
+	-ms-transition: -ms-transform 0.5s ease;
+	-o-transition: -o-transform 0.5s ease;
+	transition: transform 0.5s ease;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+}
+
+.jsc-sidebar-pushed {
+	-webkit-transform: translate3d(-400px, 0, 0);
+	-moz-transform: translate3d(-400px, 0, 0);
+	-ms-transform: translate3d(-400px, 0, 0);
+	-o-transform: translate3d(-400px, 0, 0);
+	transform: translate3d(-400px, 0, 0);
+	border-right: 1px solid #ddd;
+}
+
+.jsc-sidebar-scroll-disabled {
+	position: fixed;
+	overflow: hidden;
+}
+.sidebar-disabled {
+	display: none;
+}

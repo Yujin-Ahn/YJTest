@@ -1,0 +1,156 @@
+<!-- 
+Wishbeen과 Tourtips를 참조한
+여행사이트 만들기 테스트
+author : Yujin Ahn
+해상도 : 1366 * 768
+ -->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Main page</title>
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, 
+	width=device-width, height=device-height, target-densitydpi=device-dpi" />
+<!-- default CSS -->
+<link rel="stylesheet" href="css/fonts.css" />
+<link rel="stylesheet" href="css/main.css" />
+<link rel="stylesheet" href="css/sidebar.css" />
+<!-- default JS -->
+<script src="js/jquery-1.11.1.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/jquery.validate.js"></script>
+<script src="js/myvalidate.js"></script>
+<style>
+</style>
+</head>
+<body>
+	<nav class="jsc-sidebar" id="side-nav1">
+		<div class="title">
+		  <div class="xbtn sidebarOpened"><img src="imgs/close.png"></div>
+			<span class="mmenu" style="cursor:default"><img src="imgs/logo_white.png"></span> 
+			<span class="mmenu loginTitle"> 로그인 하기</span>
+		</div>
+		<div class="side-contents">
+			<span class="loginContent">이메일로 로그인</span>
+			<span class="loginContent"><input type="text" placeholder="Email address"></span> 
+			<span class="loginContent"><input type="password" placeholder="Password"></span>
+			<span class="loginContent">
+			<span style="font-size: 80%;"><input type="checkbox">로그인 상태 유지</span>
+			<span style="float: right; font-size: 90%; line-height: 22px; 
+			color: #F989A6;">비밀번호 찾기</span>
+			</span>
+			<hr class="hr01">
+			<span class="loginContent" style="text-align: right">
+			<button class="pinkbtn">로그인</button></span>
+		</div>
+	</nav>
+	<nav class="jsc-sidebar" id="side-nav2">
+		<div class="title">
+		  <div class="xbtn sidebarOpened"><img src="imgs/close.png"></div>
+			<span class="mmenu"  style="cursor:default"><img src="imgs/logo_white.png"></span> 
+			<span class="mmenu loginTitle"> 회원가입 하기</span>
+		</div>
+		<div class="side-contents">
+		<form id="registerForm">
+			<span class="validation"> &nbsp;* 이메일 주소를 아이디로 사용합니다.</span>
+			<span class="loginContent">
+			<input type="text" id="email" name="email" placeholder="Email address"></span> 
+			<span></span>
+			<span class="loginContent">
+			<input type="password" id="password" name="password" placeholder="Password"></span>
+			<span></span>
+			<span class="loginContent">
+			<input type="password" id="password2" name="password2" placeholder="Confirm password"></span>
+			<span></span>
+			<span class="loginContent">
+			<input type="text" id="username" name="username" placeholder="User name"></span>
+			<span></span>
+			<hr class="hr01">
+			<span class="loginContent">
+			<label>성별</label>
+			<select>
+			<option>남자 (Male)</option>
+			<option>여자 (Female)</option>
+			</select>
+			</span>
+			<span class="loginContent">
+			<label>출생년도</label>
+			<select>
+			<option>1990</option>
+			<option>1989</option>
+			</select>
+			</span>
+			<hr class="hr01">
+			<span class="loginContent" style="text-align: right">
+			<button class="pinkbtn">회원가입</button></span>
+			</form>
+		</div>
+	</nav>
+	<div
+		class="wrapper jsc-sidebar-content jsc-sidebar-pulled jsc-sidebar-pull-end">
+		<div class="main-cover"></div>
+		<section class="main-content">
+			<div id="top">
+				<div id="mmenuContainer">
+					<span class="mmenu"><img src="imgs/logo.png"></span> <span
+						class="mmenu">여행준비</span>
+					<div class="divider"></div>
+					<span class="mmenu">여행자취</span>
+					<div class="divider"></div>
+					<span class="mmenu">여행앨범</span>
+					<div class="divider"></div>
+					<span class="mmenu">여행기록하기</span>
+					<div class="divider"></div>
+					<span class="mmenu">커뮤니티</span>
+					<div class="divider"></div>
+					<span class="mmenu">포토북 제작</span>
+					<div class="right">
+						<div style="line-height: 80px; padding: 0 20px">
+							<div class="btngroup01">
+								<button class="default01 jsc-sidebar-trigger1"
+									style="border-right: 1px solid #ccc;">로그인</button>
+								<button class="default01 jsc-sidebar-trigger2">회원가입</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="container" style="min-width: 1270px">
+				<div id="mainMiddle">
+					<span>나만의 <b>여행</b>을 <b>시작</b>하세요. <span>현재 38,489개의
+							여행일정과 308,233개의 여행명소 정보가 있습니다.</span>
+					</span>
+				</div>
+				<div id="notice">
+					<span>[공지] Trace Travel Open!!</span>
+				</div>
+			</div>
+			<div style="height: 200px; background: #F5F5F5;"></div>
+			<div id="bottom">
+				<div id="bottomContainer">
+					<img src="imgs/logo_gray.png" style="width: 80px"> <span>ⓒ2015
+						Yujin Ahn All rights reserved.</span>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script>
+$('#side-nav1').sidebar({
+trigger: '.jsc-sidebar-trigger1',
+});
+$('#side-nav2').sidebar({
+trigger: '.jsc-sidebar-trigger2',
+});
+$('.jsc-sidebar-trigger2').click(function(){
+  $('#side-nav1').css('z-index','-1');
+  $('#side-nav2').css('z-index','0');
+});
+$('.jsc-sidebar-trigger1').click(function(){
+  $('#side-nav1').css('z-index','0');
+  $('#side-nav2').css('z-index','-1');
+});
+</script>
+</body>
+</html>
